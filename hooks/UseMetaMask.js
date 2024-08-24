@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { web3 } from '../lib/web3';
 import { toast } from 'react-toastify';
 
+// useMetamask Hook
 export const useMetamask = () => {
   const [address, setAddress] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -61,6 +62,7 @@ export const useMetamask = () => {
   return { address, isLoading };
 };
 
+// Detailed useBalance Hook
 export const useBalance = (address) => {
   const [balance, setBalance] = useState('0');  // Default to '0' for better UX
   const [isLoading, setIsLoading] = useState(false);
@@ -87,4 +89,14 @@ export const useBalance = (address) => {
   }, [fetchBalance]);
 
   return { balance, fetchBalance, isLoading };
+};
+
+// Simple useBalance Hook Example
+export const simpleUseBalance = () => {
+  const [balance, setBalance] = useState("0"); // Default value set to "0"
+
+  // Placeholder for fetch balance logic
+  // You can add the logic for fetching balance here if needed
+
+  return { balance, setBalance };
 };
