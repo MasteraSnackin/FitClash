@@ -116,8 +116,11 @@ README.md: Project documentation.
 License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-
 ### Additional Notes
+1. **Replace Placeholders**: Make sure to replace placeholders like `your_private_key_here`, `YOUR_CONTRACT_ADDRESS`, and `https://github.com/your-username/web3-reward-system.git` with actual values.
+2. **Detailed Documentation**: Feel free to add more sections or details as needed, such as contributing guidelines, FAQs, or detailed usage examples.
+
+By providing a comprehensive `README.md` file, you make it easier for others to understand, set up, and use your
 
 UPDATE 24/08
 Updated README for Improved MetaMask Integration and State Initialization
@@ -163,8 +166,3 @@ const connectMetaMask = async () => {
 Configured Toast Notifications in the Main App Component:
 
 We added a ToastContainer to the main app component to ensure that all notifications are displayed correctly.
-
-1. **Replace Placeholders**: Make sure to replace placeholders like `your_private_key_here`, `YOUR_CONTRACT_ADDRESS`, and `https://github.com/your-username/web3-reward-system.git` with actual values.
-2. **Detailed Documentation**: Feel free to add more sections or details as needed, such as contributing guidelines, FAQs, or detailed usage examples.
-
-By providing a comprehensive `README.md` file, you make it easier for others to understand, set up, and use your 
