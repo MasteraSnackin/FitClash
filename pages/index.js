@@ -1,7 +1,9 @@
 'use client';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useMetamask, useBalance } from '../hooks/useMetamask';
-import { getContract } from '../lib/web3';
+import { getContract, web3 } from '../lib/web3';
 import styled from 'styled-components';
 
 // Replace with your deployed contract's ABI
@@ -24,20 +26,21 @@ export default function Home() {
       try {
         const accounts = await web3.eth.getAccounts();
         await rewardTokenContract.methods.mint(address, web3.utils.toWei('1', 'ether')).send({ from: accounts[0] });
-        alert('Token minted successfully!');
+        toast.success('Token minted successfully!');
       } catch (error) {
         console.error("Error minting token:", error);
-        alert('Failed to mint token. Please try again.');
+        toast.error('Failed to mint token. Please try again.');
       } finally {
         setIsMinting(false);
       }
     } else {
-      alert('Milestone not reached.');
+      toast.warn('Milestone not reached.');
     }
   };
 
   const handleCompleteJump = () => {
     setMilestone(milestone + 1);
+    toast.info(`Star Jump completed! Total: ${milestone + 1}`);
   };
 
   return (
@@ -50,7 +53,7 @@ export default function Home() {
           value={address}
           readOnly
         />
-        {isLoadingAddress && <LoadingMessage>Connecting to Metamask...</LoadingMessage>}
+        {isLoadingAddress && <LoadingMessage>Connecting to MetaMask...</LoadingMessage>}
       </InputContainer>
       <Button onClick={fetchBalance} disabled={isLoadingBalance || !address}>
         {isLoadingBalance ? 'Fetching Balance...' : 'Get Balance'}
@@ -65,6 +68,8 @@ export default function Home() {
       <Button onClick={handleMintToken} disabled={isMinting || !address}>
         {isMinting ? 'Minting Token...' : 'Mint Token'}
       </Button>
+      {/* ToastContainer for notifications */}
+      <ToastContainer />
     </Container>
   );
 }
