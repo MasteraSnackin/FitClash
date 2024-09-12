@@ -1,15 +1,12 @@
 # Web3 Reward System
 
-This project is a Web3 application built with Hardhat and Next.js. The project includes a smart contract (`RewardToken`) deployed on the Moonbase network, and a frontend application that interacts with the smart contract using Metamask.
-This is just just an small part of the main application which can be found here https://github.com/fitclash
-Demo is https://fitclash.vercel.app/?call=2&number=962
+This project is a Web3 application built using Hardhat and Next.js, featuring a smart contract (RewardToken) deployed on the Moonbase network. The frontend interacts with the smart contract via MetaMask. This is a part of a larger application, which can be found ttps://github.com/fitclash check out th live demo https://fitclash.vercel.app/?call=2&number=962
 
 
 ## Overview
 
-The Web3 Reward System allows users to connect their Metamask wallet, complete a milestone (e.g., star jumps), and mint reward tokens upon reaching the milestone. The smart contract is deployed on the Moonbase test network.
-This is just just an small part of the main application which can be found here https://github.com/fitclash
-Demo is https://fitclash.vercel.app/?call=2&number=962
+The Web3 Reward System enables users to connect their MetaMask wallet, complete milestones (e.g., star jumps), and mint reward tokens upon completion. The smart contract is deployed on the Moonbase Alpha test network. For more details, visit the main application repository https://github.com/fitclash
+or check the demo https://fitclash.vercel.app/?call=2&number=962
 
 ## Prerequisites
 
@@ -28,7 +25,6 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/your-username/web3-reward-system.git
 cd web3-reward-system
-
 
 Install the dependencies:
 npm install
@@ -56,11 +52,11 @@ npm run dev
 Open your browser and navigate to http://localhost:3000 to interact with the application.
 
 Deployment
-The deployment script is located in the scripts/ directory. To deploy the RewardToken contract, run:
+The deployment script is located in the scripts/ directory. To deploy the RewardToken contract, use:
 
 npx hardhat run scripts/deploy.js --network moonbase
 Testing
-To run the tests for the smart contracts, run:
+Run tests for the smart contracts:
 
 npm run test
 Scripts
@@ -71,7 +67,8 @@ coverage: Generates a test coverage report.
 lint: Lints the codebase using ESLint.
 format: Formats the codebase using Prettier.
 dev: Runs the Next.js development server.
-Project Structure
+
+#Project Structure
 web3-reward-system/
 ├── contracts/
 │   └── RewardToken.sol
@@ -113,8 +110,9 @@ styles/: Contains CSS styles.
 hardhat.config.js: Hardhat configuration.
 package.json: Project dependencies and scripts.
 README.md: Project documentation.
-License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+
+#License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ### Additional Notes
 1. **Replace Placeholders**: Make sure to replace placeholders like `your_private_key_here`, `YOUR_CONTRACT_ADDRESS`, and `https://github.com/your-username/web3-reward-system.git` with actual values.
