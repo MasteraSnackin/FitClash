@@ -119,12 +119,3 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 2. **Detailed Documentation**: Feel free to add more sections or details as needed, such as contributing guidelines, FAQs, or detailed usage examples.
 
 By providing a comprehensive `README.md` file, you make it easier for others to understand, set up, and use your
-
-UPDATE 24/08
-Updated README for Improved MetaMask Integration and State Initialization
-Overview
-This update introduces improvements in error handling, user feedback, and state initialization for the MetaMask integration in our application. The changes include implementing toast notifications for better user feedback and initializing state variables with meaningful default values to enhance the user experience.
-
-1. Error Handling and User Feedback
-To provide users with a more intuitive experience, we've enhanced the MetaMask integration logic to include user-friendly error messages and notifications. This ensures users are promptly informed of any issues, such as when MetaMask is not detected.
-
