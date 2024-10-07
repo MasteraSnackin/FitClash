@@ -128,39 +128,3 @@ This update introduces improvements in error handling, user feedback, and state 
 1. Error Handling and User Feedback
 To provide users with a more intuitive experience, we've enhanced the MetaMask integration logic to include user-friendly error messages and notifications. This ensures users are promptly informed of any issues, such as when MetaMask is not detected.
 
-Changes Made:
-Installed react-toastify for notifications:
-
-We added the react-toastify library to display toast notifications. This helps notify users of connection statuses and errors interactively.
-
-Installation Command:
-
-bash
-Copy code
-npm install react-toastify
-Updated MetaMask Connection Logic:
-
-The connectMetaMask function in UseMetaMask.js now includes error handling that uses toast notifications to inform the user if MetaMask is not detected or if there is an error during the connection process.
-
-Example Code Update:
-
-jsx
-Copy code
-// UseMetaMask.js
-import { toast } from 'react-toastify';
-
-const connectMetaMask = async () => {
-  if (typeof window.ethereum === 'undefined') {
-    toast.error('MetaMask is not detected. Please install MetaMask to continue.');
-    return;
-  }
-
-  try {
-    // Your MetaMask connection logic
-  } catch (error) {
-    toast.error(`Error connecting to MetaMask: ${error.message}`);
-  }
-};
-Configured Toast Notifications in the Main App Component:
-
-We added a ToastContainer to the main app component to ensure that all notifications are displayed correctly.
